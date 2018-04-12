@@ -1,0 +1,67 @@
+// compileOnSave compressed compileCompressed: '../css/main.min.css'
+@import "mixins";
+
+@mixin card-day {
+  .card {
+    background: transparent;
+    border: 0px;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    p {
+      margin: 2px 0 0 0;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300 !important;
+    }
+  }
+}
+
+html {
+  @include html;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+.time {
+  font-weight: 300;
+  width: 200px;
+  padding-bottom: 20px;
+}
+
+#current {
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+  @include card-day;
+  margin-bottom: 100px;
+}
+
+#daily {
+  @include card-day;
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    align-items: center;
+    padding: 30px;
+  }
+
+  .time {
+    text-align: center;
+    padding-bottom: 0px;
+  }
+}
