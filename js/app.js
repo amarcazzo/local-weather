@@ -8,7 +8,7 @@ $(document).ready(function() {
   var location = '';
   var city = '';
 
-  $.getJSON('http://freegeoip.net/json/', function(res) {
+  $.getJSON('https://freegeoip.net/json/', function(res) {
     location = res.latitude + ',' + res.longitude;
     console.log(res)
     city = res.city;
